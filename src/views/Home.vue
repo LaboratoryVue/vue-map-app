@@ -3,8 +3,8 @@
     <div class="home__map"></div>
     <div class="home__nav">
       <nav class="navigation">
-        <a class="navigation__item" href="#">moscow</a>
-        <a class="navigation__item" href="#">petersberg</a>
+        <a @click="onSelect('moscow')" class="navigation__item" href="#">moscow</a>
+        <a @click="onSelect('petersberg')" class="navigation__item" href="#">petersberg</a>
       </nav>
     </div>
   </div>
@@ -15,8 +15,10 @@
 
 export default {
   name: 'home',
-  components: {
-    // HelloWorld
+  methods: {
+    onSelect(value) {
+      console.log(value)
+    }
   }
 }
 </script>
